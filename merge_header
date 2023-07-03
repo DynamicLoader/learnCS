@@ -1,0 +1,20 @@
+/**
+ * @file HRCore.hpp
+ * @brief Standalone header file (pre-configured and merged)
+ */
+
+#ifndef __HRCORE_HPP__
+#define __HRCORE_HPP__
+
+#ifndef HRCORE_DISABLE_WARNINGS
+#warning Welcome use HRCore! The library is a part of big homework, WITHOUT ANY SAFETY GARANTEE!
+#endif
+
+#include <algorithm>
+#include <iostream>
+#include <exception>
+#include <cstdint>
+
+#include <deque> // For expressions
+#include <stack>
+#include <complex> // For FFT support in the future

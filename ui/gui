@@ -1,0 +1,299 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0308
+header_name {.h}
+code_name {.cpp}
+comment {//
+// "$Id$"
+//
+// ... for the Fast Light Tool Kit (FLTK).
+//
+// Copyright 1998-2010 by Bill Spitzak and others.
+//
+// This library is free software. Distribution and use rights are outlined in
+// the file "COPYING" which should have been included with this file.  If this
+// file is missing or damaged, see the license at:
+//
+//     http://www.fltk.org/COPYING.php
+//
+// Please report all bugs and problems on the following page:
+//
+//     http://www.fltk.org/str.php
+//
+} {in_source in_header
+}
+
+decl {\#include <FL/Fl_PNG_Image.H>} {public global
+}
+
+decl {\#include <FL/Fl_File_Chooser.H>} {public global
+}
+
+decl {\#include <FL/fl_ask.H>} {public global
+}
+
+class UIMain {open
+} {
+  Function {init()} {open private return_type void
+  } {
+    Fl_Window window_main {
+      label {HRCore Calculator} open
+      xywh {225 337 800 480} type Double selection_color 255 align 80 hide hotspot non_modal size_range {800 480 800 480}
+    } {
+      Fl_Tabs tab0 {open
+        xywh {0 0 800 460} box GTK_UP_BOX color 7 selection_color 43
+      } {
+        Fl_Group tab0_easy {
+          label {   Easy Mode   } open selected
+          xywh {0 30 800 430} selection_color 7
+        } {
+          Fl_Button btnEasyAC {
+            label AC
+            xywh {680 245 45 40}
+          }
+          Fl_Choice optAB {
+            label {A __ B:} open
+            xywh {730 130 55 45} down_box BORDER_BOX
+          } {
+            MenuItem {} {
+              label {+}
+              xywh {0 0 30 20}
+            }
+            MenuItem {} {
+              label {-}
+              xywh {0 0 30 20}
+            }
+            MenuItem {} {
+              label {*}
+              xywh {0 0 30 20}
+            }
+            MenuItem {} {
+              label {/}
+              xywh {0 0 30 20}
+            }
+          }
+          Fl_Choice optBC {
+            label {B __ C:} open
+            xywh {730 185 55 45} down_box BORDER_BOX
+          } {
+            MenuItem {} {
+              label {+}
+              xywh {0 0 30 20}
+            }
+            MenuItem {} {
+              label {-}
+              xywh {0 0 30 20}
+            }
+            MenuItem {} {
+              label {*}
+              xywh {0 0 30 20}
+            }
+            MenuItem {} {
+              label {/}
+              xywh {0 0 30 20}
+            }
+          }
+          Fl_Button btnEasyCalc {
+            label {=}
+            xywh {740 245 45 40}
+          }
+          Fl_Text_Editor inA {
+            xywh {50 45 615 70}
+            code0 {inA->buffer(&tbfA);}
+            code1 {inA->wrap_mode(3,0);}
+          }
+          Fl_Text_Editor inB {
+            xywh {50 130 615 70}
+            code0 {inB->buffer(&tbfB);}
+            code1 {inB->wrap_mode(3,0);}
+          }
+          Fl_Text_Editor inC {
+            xywh {50 215 615 70}
+            code0 {inC->buffer(&tbfC);}
+            code1 {inC->wrap_mode(3,0);}
+          }
+          Fl_Text_Display outEasy {
+            xywh {50 300 735 145}
+            code0 {outEasy->buffer(&tbfOut);}
+            code1 {outEasy->wrap_mode(3,0);}
+          }
+          Fl_Tile {} {
+            label {A = }
+            xywh {10 90 30 15}
+          } {}
+          Fl_Tile {} {
+            label {B = }
+            xywh {10 175 30 15}
+          } {}
+          Fl_Tile {} {
+            label {C = }
+            xywh {10 265 30 15}
+          } {}
+          Fl_Tile {} {
+            label { = }
+            xywh {15 380 30 15}
+          } {}
+          Fl_Button btnSave {
+            label {Save To}
+            xywh {675 85 115 30}
+          }
+          Fl_Menu_Button btnLoad {
+            label {Load To ...} open
+            xywh {675 45 115 30}
+          } {
+            MenuItem {} {
+              label A
+              xywh {0 0 30 20}
+            }
+            MenuItem {} {
+              label B
+              xywh {0 0 30 20}
+            }
+            MenuItem {} {
+              label C
+              xywh {0 0 30 20}
+            }
+          }
+        }
+        Fl_Group tab0_adv {
+          label {   Advanced Mode   } open
+          xywh {0 30 800 430} selection_color 7 hide
+        } {
+          Fl_Text_Editor inAdv {
+            label {Input Expression}
+            xywh {25 60 360 305} resizable
+            code0 {inAdv->buffer(&tbfAdv);}
+            code1 {inAdv->wrap_mode(3,0);}
+          }
+          Fl_Text_Display outAdv {
+            label Result
+            xywh {410 60 365 305}
+            code0 {outAdv->buffer(&tbfAdvOut);}
+            code1 {outAdv->wrap_mode(3,0);}
+          }
+          Fl_Round_Button optIO {
+            label {Use GUI IO}
+            xywh {25 380 135 30} type Radio down_box ROUND_DOWN_BOX
+            code0 {optIO->value(1);}
+            code1 {optIO->callback(optIOCB,this);}
+          }
+          Fl_Round_Button optFile {
+            label {Use File-based IO}
+            xywh {25 415 135 30} type Radio down_box ROUND_DOWN_BOX deactivate
+            code0 {optFile->callback(optIOCB,this);}
+          }
+          Fl_Button btnAdvOpen {
+            label {@fileopen}
+            xywh {515 385 50 50} labelcolor 30
+          }
+          Fl_Button btnAdvSave {
+            label {@filesave}
+            xywh {585 385 50 50} labelcolor 30
+          }
+          Fl_Button btnAdvCalc {
+            label {@>}
+            xywh {655 385 50 50} labelcolor 30
+          }
+          Fl_Button btnAdvAC {
+            label {@reload}
+            xywh {725 385 50 50} labelcolor 30
+          }
+        }
+        Fl_Group tab0_set {
+          label {   Settings   } open
+          xywh {0 30 800 420} selection_color 7 hide deactivate
+        } {
+          Fl_Group {} {
+            label {Not yet finished!} open
+            xywh {40 58 710 210}
+          } {}
+        }
+      }
+      Fl_Button btnAbout {
+        label About
+        xywh {735 0 65 30} box FLAT_BOX selection_color 40 align 64
+      }
+      Fl_Output txtStatus {
+        xywh {0 461 620 19} box THIN_UP_BOX color 49
+        code0 {txtStatus->value("Ready.");}
+      }
+      Fl_Output txtR {
+        xywh {620 461 180 19} box THIN_UP_BOX color 49
+        code0 {txtR->value("");}
+      }
+      Fl_Button btnQuestion {
+        label {?}
+        xywh {700 0 35 30} box FLAT_BOX selection_color 40 align 64
+      }
+      Fl_Button btnStop {
+        label Stop
+        xywh {645 0 50 30} box FLAT_BOX selection_color 40 align 64 deactivate
+      }
+    }
+  }
+  Function {btnAboutCB(Fl_Widget*)} {open return_type {static void}
+  } {
+    code {fl_beep();
+    fl_message_title("About HRCore Calculator");
+    fl_alert(
+        "  This is an example UI project for HRCore,\\n"
+        "a high-resolution calculating core library,\\n"
+        "which shows how to use the library actually.\\n\\n"
+        "UI Version: V0.8 ,with HRCore V1.1.0 \\n"
+    	"GUI by FLTK - https://www.fltk.org/  \\n"
+        "License: LGPL v3\\n\\n"
+        "     Copyright 2023 Lu Yi, SCUT CS \\n");} {}
+  }
+  Function {btnQuestionCB(Fl_Widget*)} {open return_type {static void}
+  } {
+    code {fl_message_title("Help of HRCore Calculator");
+fl_beep(0);
+fl_alert(
+	"Q: How to use the program?\\n"
+	"A: The program is designed as two modes, easy mode and advanced mode.\\n"
+	"   Easy mode is designed to calculate a simple expression, on this \\n"
+	"   version it can only calculate A __ B __ C (__ refer to '+-*/').\\n"
+	"   Advanced mode can evaluate a expression and get the result. Note \\n"
+	"   that both of them only support for integers, not float or double.\\n\\n"
+	"Q: Can I pause a calculation?\\n"
+	"A: No, but you can just terminate it by clicking the [Stop] button. \\n"
+	"   When there are some calculation performing, the program will show\\n"
+	"   a dialog to ask you again if you'd close the window.\\n\\n"
+	"Q: About the precision?\\n"
+	"A: On paper there are no precision lost, but without any gurantee!\\n\\n"
+	
+	"That's all, thanks for using this library and GUI!\\n"
+);} {}
+  }
+  Function {UIMain()} {open
+  } {
+    code {init();
+btnAbout->callback(btnAboutCB);
+btnQuestion->callback(btnQuestionCB);
+Fl_PNG_Image defaultIcon(NULL, IconData, sizeof(IconData));
+window_main->icon(&defaultIcon);} {}
+  }
+  decl {Fl_Text_Buffer tbfAdv;} {public local
+  }
+  Function {optIOCB(Fl_Widget* w,void* ptr)} {return_type {static void}
+  } {
+    code {UIMain* ui = (UIMain*)ptr;
+ui->useFileIO = ( ui->optFile->value() != 0);} {}
+  }
+  decl {Fl_Text_Buffer tbfA;} {public local
+  }
+  decl {Fl_Text_Buffer tbfB;} {public local
+  }
+  decl {Fl_Text_Buffer tbfC;} {public local
+  }
+  decl {Fl_Text_Buffer tbfOut;} {public local
+  }
+  decl {Fl_Text_Buffer tbfAdvOut;} {public local
+  }
+  decl {bool useFileIO = false;} {public local
+  }
+  decl {bool busy = false;} {public local
+  }
+}
+
+data IconData {public local filename {app.png}
+}
