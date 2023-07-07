@@ -1,0 +1,3 @@
+BasedOnStyle : Microsoft
+UseTab : Never
+SortIncludes : false

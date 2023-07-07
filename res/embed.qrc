@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/embed">
+        <file>binimgs/baboonzyp256_binary.bmp</file>
+        <file>binimgs/bigbuildingzyp256_binary.bmp</file>
+        <file>binimgs/boatzyp256_binary.bmp</file>
+        <file>binimgs/bridgezyp256_binary.bmp</file>
+        <file>binimgs/flightzyp256_binary.bmp</file>
+        <file>binimgs/lenazyp256_binary.bmp</file>
+        <file>binimgs/leopardzyp256_binary.bmp</file>
+        <file>binimgs/mapaspzyp256_binary.bmp</file>
+        <file>binimgs/pepperszyp256_binary.bmp</file>
+        <file>binimgs/picturezyp256_binary.bmp</file>
+    </qresource>
+</RCC>

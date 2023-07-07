@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/ui">
+        <file>img/qt-logo.png</file>
+        <file>img/icon.png</file>
+        <file>img/rnam.png</file>
+        <file>img/tnam.png</file>
+        <file>img/about.logo.png</file>
+        <file>img/sun.png</file>
+        <file>img/moon.png</file>
+        <file>img/system.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>qtquickcontrols2.conf</file>
+    </qresource>
+</RCC>
