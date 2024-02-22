@@ -33,6 +33,13 @@ You can initialize submodules by executing the following command:
 git submodule update --init 
 ```
 
+**Note: This repo is NOT the original repo, so the submodule could not be initialized normally. All submodules are recorded in file `.gitsubmodule`, with the following version:**
+```
+ asmjit@1da9e4d957
+ bzip2@9de658d248
+ cereal@d1fcec807b
+```
+
 ### Build Options
 
 | Name        | Default | Description                                                                 |
@@ -55,5 +62,3 @@ To do this, you need to install target-specific C++ toolchains with at least C++
 ## License
 
 Open source under GPL-3.
-
-<!-- The project is part of a course, so this will not be made public until 3 months after it! -->
