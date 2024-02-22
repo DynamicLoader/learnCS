@@ -1,0 +1,10 @@
+======================================= Arbitrary Code Execution (ACE) Warning =======================================
+You are requesting the interpreter to run the code!
+
+- The interpreter is built with JIT, which means the code can truly run on your machine instead of a sandbox or VM.
+- However, the interpreter is still in the experimental phase and may generate some code that can cause crashes.
+
+* To suppress the warning, add the -y argument to the compiler.
+
+ONLY RUN THE CODE IF YOU UNDERSTAND ITS FUNCTIONALITY!
+Do you really want to run the code? (YES/[NO]): 

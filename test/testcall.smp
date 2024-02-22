@@ -1,0 +1,36 @@
+/* A simple example that shows Fibonacci */
+
+#include {libstdintpr}
+
+procedure fib(
+    a : real;
+) : real;
+
+begin
+    if (a <= 0) then
+        return 0;
+    if(a = 1 or a = 2) then
+        return 1
+    else
+        return fib(a-2) + fib(a-1)
+end.
+
+constant c:char('Welcome to Fibonacci Test!');
+program testint;
+var in,out : integer; 
+
+begin
+    call printsln(c);
+    call prints('Please input n: ');
+    in := readInt();
+    call printsln('');
+    call prints('You have input: ');
+    call printInt(in);
+    call printsln('');
+
+    out := fib(in);
+    call prints('The Fibonacci value is: ');
+    call printInt(out);
+    call printsln('');
+    return out;
+end.

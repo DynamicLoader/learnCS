@@ -1,0 +1,20 @@
+/* STD INTPR - Library for Standalone Interpreter */
+
+
+/* External Functions */
+
+procedure prints(
+    s:char;
+) : void;
+
+procedure printsln(
+    s:char;
+) : void;
+
+procedure printInt(
+    s:integer;
+) : void;
+
+procedure readInt : integer;
+
+

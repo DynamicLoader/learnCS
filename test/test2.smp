@@ -1,0 +1,19 @@
+program example4;
+var D,B,C : integer;
+A : integer;
+
+begin
+    A := 1;
+    B := 5;
+    C := 10;
+    D := 15;
+        
+        /* if A <= 1 or A < 2 and B > 3 or not ( not (A > 4 and B = 5)) then */ 
+         if A < 1 and A < 2  and not ( A > 3 or B < 4) then 
+            C := (D + A)
+        else 
+            A := C
+        ;
+        D := A
+end
+.

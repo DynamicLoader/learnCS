@@ -1,0 +1,12 @@
+program test3;
+var D,B,C : integer;
+A : bool;
+
+begin
+
+
+      if C <D or B>C then
+            A := true
+      else 
+            A := false and C < D;
+end.

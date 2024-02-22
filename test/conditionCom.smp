@@ -1,0 +1,22 @@
+program condition;
+var A,B,C,D : integer;
+
+#define Ayachi 2
+#define Nene 3
+
+begin
+
+#ifdef Alichi
+    A := 1;
+#endif
+
+#ifndef Alichi
+    #if Ayachi and Nene
+        A := 3;
+    #endif
+    #ifndef Nene
+        A := 4;
+    #endif
+#endif
+
+end.

@@ -1,0 +1,8 @@
+
+Additional options with [Interpreter] are listed below:
+
+	-r 		Run the compiled code with interpreter.
+	-y		Supress ACE warning.
+
+	-p <path>	Produce standalone interpreter with compiled code into <path>.
+ 

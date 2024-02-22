@@ -1,0 +1,18 @@
+
+dim a,b : integer;
+constant c : bool(true);
+constant d: integer(2147483647);
+dim e,f: real;
+
+program testint;
+var D,B,C : integer; 
+A:real;
+
+begin
+    C := 12;
+    D:= 34;
+
+    A := d+d+d;
+    return d%C;
+    
+end.

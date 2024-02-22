@@ -1,0 +1,19 @@
+program cwork1;
+var A,B,C,D : integer;
+
+begin
+	while A<C and B<D do
+    begin
+        repeat
+            begin
+                A:=A+1;
+                B:=B+1;
+                if A=1 then
+                    break;
+            end
+        until A=1;
+
+		if A=1 then
+			break;
+    end
+end.

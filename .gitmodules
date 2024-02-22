@@ -1,0 +1,10 @@
+[submodule "asmjit"]
+path = deps/asmjit
+url = https://github.com/asmjit/asmjit.git
+
+[submodule "bzip2"]
+path = deps/bzip2
+url = git://sourceware.org/git/bzip2.git
+[submodule "deps/cereal"]
+	path = deps/cereal
+	url = https://github.com/USCiLab/cereal.git

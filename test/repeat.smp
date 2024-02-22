@@ -1,0 +1,16 @@
+program example114514;
+var AyachiNene0721,B,C,D : integer;
+A : integer;
+/* Now you see me, now you don't */
+
+begin
+    AyachiNene0721 := 1;
+    B := 5;
+    C := 10;
+    D := 15;
+
+    repeat
+        C := 114514
+    until AyachiNene0721 > 10
+end
+.

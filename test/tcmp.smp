@@ -1,0 +1,14 @@
+
+dim a,b : integer;
+constant c : bool(true);
+constant d: integer(2147483647);
+dim e,f: real;
+
+program testint;
+var D,B,C : integer; 
+A:real;
+
+begin
+    if(A > B) then ;
+    if(A > b) then ;
+end.

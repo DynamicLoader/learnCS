@@ -1,0 +1,8 @@
+program cwork1;
+var A,B,C,D : integer;
+
+begin
+	while A< C and B <D do
+		if A=1 then
+			C:=C+1;
+end.

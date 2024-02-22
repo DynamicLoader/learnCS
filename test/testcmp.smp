@@ -1,0 +1,32 @@
+/* A simple example that shows Fibonacci */
+
+procedure prints(
+    s:char;
+) : void;
+
+procedure printsln(
+    s:char;
+) : void;
+
+procedure printInt(
+    s:integer;
+) : void;
+
+procedure readInt : integer;
+
+/* End of external functions */
+
+
+constant na:integer(2);
+program testint;
+var in,out : integer; 
+
+begin
+    in := - na;
+    call printInt(in);
+    if(in <= 0) then 
+        call printsln('less')
+    else
+        call printsln('not less');
+    return out;
+end.

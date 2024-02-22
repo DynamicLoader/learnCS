@@ -1,0 +1,15 @@
+program test5;
+var D,B,C : integer;
+A : integer;
+H : bool;
+
+begin
+        if A <D then 
+            if A > 1 then
+                A:=(A)
+            else
+                C:= C+2;
+
+        if A > C then
+            H := false;
+end.

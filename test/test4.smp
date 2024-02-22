@@ -1,0 +1,39 @@
+
+dim gA , gb : integer;
+constant ca,cb : integer(1234567);
+
+procedure ext1(
+    A,B : integer;
+) : void;
+
+procedure test4(
+    A ,B : integer;
+) : integer;
+
+begin
+    A:= gA;
+    B:= A;
+end.
+
+dim gd : integer;
+
+procedure test5 : void;
+var A : integer;
+begin
+    A:= gb;
+end.
+
+procedure test : integer;
+begin
+    gA := 1;
+end.
+
+
+program prog;
+var A : integer;
+begin
+    call test5();
+    A:= test4(gA + 1,gb);
+    A:= test4(test(),gb);
+    /*A:= test5();*/
+end.

@@ -1,0 +1,12 @@
+/* dim A:integer; */
+
+program test6;
+var D,B,C : integer;
+A : integer..;
+H : bool..;
+F : char;
+
+begin
+    F:= '3123';
+    A := ..D;
+end.

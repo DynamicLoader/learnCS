@@ -1,0 +1,20 @@
+program example4;
+var AyachiNene0721,B,C,D : integer;
+A : integer;
+/* Now you see me, now you don't */
+
+begin
+    AyachiNene0721 := 1;
+    B := 5;
+    C := 10;
+    D := 15;
+
+    while AyachiNene0721 < C do
+        if A = 1 then
+            C := 114514
+        else
+            while A <= D
+                do
+                    A := A * 2;
+end
+.

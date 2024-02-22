@@ -1,0 +1,70 @@
+          _____                    _____                    _____            _____          
+         /\    \                  /\    \                  /\    \          /\    \         
+        /::\    \                /::\    \                /::\____\        /::\    \        
+       /::::\    \              /::::\    \              /:::/    /       /::::\    \       
+      /::::::\    \            /::::::\    \            /:::/    /       /::::::\    \      
+     /:::/\:::\    \          /:::/\:::\    \          /:::/    /       /:::/\:::\    \     
+    /:::/__\:::\    \        /:::/__\:::\    \        /:::/    /       /:::/  \:::\    \    
+    \:::\   \:::\    \      /::::\   \:::\    \      /:::/    /       /:::/    \:::\    \   
+  ___\:::\   \:::\    \    /::::::\   \:::\    \    /:::/    /       /:::/    / \:::\    \  
+ /\   \:::\   \:::\    \  /:::/\:::\   \:::\____\  /:::/    /       /:::/    /   \:::\    \ 
+/::\   \:::\   \:::\____\/:::/  \:::\   \:::|    |/:::/____/       /:::/____/     \:::\____\
+\:::\   \:::\   \::/    /\::/    \:::\  /:::|____|\:::\    \       \:::\    \      \::/    /
+ \:::\   \:::\   \/____/  \/_____/\:::\/:::/    /  \:::\    \       \:::\    \      \/____/ 
+  \:::\   \:::\    \               \::::::/    /    \:::\    \       \:::\    \             
+   \:::\   \:::\____\               \::::/    /      \:::\    \       \:::\    \            
+    \:::\  /:::/    /                \::/____/        \:::\    \       \:::\    \           
+     \:::\/:::/    /                  ~~               \:::\    \       \:::\    \          
+      \::::::/    /                                     \:::\    \       \:::\    \         
+       \::::/    /                                       \:::\____\       \:::\____\        
+        \::/    /                                         \::/    /        \::/    /        
+         \/____/                                           \/____/          \/____/         
+                                                                                            
+Usage: %s [Options] [Input]
+
+[Input]: 
+Path to source file. If not specified, the compiler will take STDIN as input.
+
+Options:
+
+  -o,--out<output>  
+      Specify the output path. If not given, the compiler will write to STDOUT.
+
+  -e       
+      Enable language extension (e.g. builtin library).
+
+  -D <Def> [=value]
+      Define macros.
+
+  -O <level>
+      Specify optimization level.
+
+  -w <loglevel>       
+      Specify the loglevel. The value can be:
+          0 - None
+          1 - Error
+          2 - Warning
+          3 - Note
+          4 - Info
+          5 - Debug
+
+  --log=<logfile>    
+      Specify the log path. If not given, the compiler will log into STDERR.
+
+  --trans=<translatorID>  
+      Specify the translator. <TranslatorID> could be:
+          0 - None
+          1 - Simple (default, As documented)
+          2 - DEBUG  (with debug info)
+  
+  -h, --help  
+      Print this help.
+
+  --version 
+      Print version info.
+
+%s
+
+Depends on FLEX, GNU Bison, BZIP2. 
+
+By @AlexLin, @DynamicLoader.
