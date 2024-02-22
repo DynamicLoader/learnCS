@@ -3,6 +3,8 @@
 
 ## Introduction
 
+Simple Compiler is a compiler based on FLEX and GNU bison, to compile Simple Lang, with preprocessor and JIT interpreter.
+
 ## Build
 
 Please make sure your system meets the following requirements:
@@ -35,9 +37,9 @@ git submodule update --init
 
 **Note: This repo is NOT the original repo, so the submodule could not be initialized normally. All submodules are recorded in file `.gitsubmodule`, with the following version:**
 ```
- asmjit@1da9e4d957
- bzip2@9de658d248
- cereal@d1fcec807b
+ asmjit @ 1da9e4d957
+ bzip2 @ 9de658d248
+ cereal @ d1fcec807b
 ```
 
 ### Build Options
@@ -58,6 +60,12 @@ Due to the convenience of developing compilers under Linux, the main platform is
 To do this, you need to install target-specific C++ toolchains with at least C++17 support. Then specify the toolchain in CMake to generate a Makefile and build.
 
 **Building BZip2 from source will help in this case unless your cross-compile toolchain already has the library!**
+
+
+## Contributors
+
+- @DynamicLoader
+- @AlexLin
 
 ## License
 
