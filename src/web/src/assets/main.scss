@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.noto-sans-regular {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.noto-sans-bold {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.noto-sans-light {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.noto-sans-sc-regular {
+  font-family: "Noto Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.noto-sans-sc-bold {
+  font-family: "Noto Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.noto-sans-sc-light {
+  font-family: "Noto Sans SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+:root {
+  font-family: 'Noto Sans', 'Noto Sans SC', sans-serif;
+}
+
+/* Colors */
+$primary: #251ee7;
+$secondary: #32ade3;
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+}
+
+.coauthor-card-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.doilink {
+  color: $primary;
+  text-decoration: underline;
+}
+
+.search {
+  width: calc(min(80%, 800px));
+  @apply ml-4 border border-gray-300 rounded-md py-2 px-4;
+  @apply outline-none;
+
+  border-color: #bbb;
+  border-width: 1px;
+  transition-duration: 300ms;
+
+  background: transparent;
+
+  &:focus,
+  &:focus:hover {
+    border: solid 1px $primary;
+    box-shadow: 0 0 6px $primary;
+
+    background: white;
+    transition-duration: 300ms;
+  }
+
+  &:hover {
+    box-shadow: 0 0 6px rgba($primary, 0.4);
+    transition-duration: 300ms;
+  }
+}
+
+.miniSearch {
+  @apply ml-4 border border-gray-300 rounded-md py-2 px-4;
+  @apply outline-none;
+  width: calc(min(320px, 70%));
+  transition-duration: 500ms;
+
+  &:focus {
+    width: calc(min(450px, 70%));
+    border: solid 1px $primary;
+    box-shadow: 0 0 6px $primary;
+
+    transition-duration: 500ms;
+  }
+}
+
+.Button {
+  @apply px-6 py-2 mx-2 rounded-full shadow-md text-c-grey;
+  transition-duration: 300ms;
+
+  &:hover {
+    @apply shadow-lg;
+    transition-duration: 300ms;
+  }
+}
+
+.Button.primary {
+  background: $primary;
+  color: #fff;
+}
+
+.is-loading {
+  overflow: hidden;
+}
+
+@keyframes slide {
+  0% {
+    left: -30%;
+    opacity: 1;
+  }
+
+  100% {
+    left: 95%;
+    opacity: 0;
+  }
+}
+
+$loadingColor: #e1e1e1;
+
+.is-loading {
+  @apply rounded-2xl w-full my-8;
+  background: $loadingColor;
+  overflow: hidden;
+  position: relative;
+}
+
+.is-loading::before {
+  content: "";
+  position: absolute;
+  display: block;
+
+  width: 15%;
+  height: inherit;
+
+  background: linear-gradient(90deg,
+      rgba(#ffffff, 0) 0%,
+      rgba(#ffffff, 0.4) 40%,
+      rgba(#ffffff, 0.2) 45%,
+      rgba(#ffffff, 0.4) 50%,
+      rgba(#ffffff, 0.4) 60%,
+      rgba(#ffffff, 0));
+  /* 渐变日后调漂亮点 */
+  animation: slide forwards 1.8s infinite;
+  overflow: hidden;
+}
+
+.have-bar::before {
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+
+  height: 1.2em;
+  width: 6px;
+  @apply my-2 rounded-full;
+
+  margin: 0 1em 0 0;
+
+  background: linear-gradient(180deg, $secondary, $primary);
+}
+
+.have-bar.is-secondary::before {
+  height: 6px;
+  margin: 0 0.4em 0 0;
+
+  background: linear-gradient(180deg, $secondary, #aefffa);
+}
+
+.have-bottom-line {
+  border-bottom: solid 1px #cccccc;
+}
+
+.nav-input {
+  @apply px-2 py-2 rounded-full text-c-dark text-center;
+  width: 48px;
+  height: 48px;
+
+  border: solid #bbbbbb;
+  outline: none;
+
+  transition-duration: 300ms;
+}
+
+.nav-input:focus {
+  border: solid $primary;
+  box-shadow: 0 0 6px $primary;
+
+  transition-duration: 300ms;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE 和 Edge */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+    /* 隐藏Webkit内核浏览器的滚动条 */
+  }
+
+  /* 确保内容区域可以滚动 */
+  overflow-y: auto;
+  /* 垂直滚动 */
+  overflow-x: hidden;
+  /* 隐藏水平滚动，如果不需要的话 */
+}
+
+.rainbow {
+  font-size: 40px;
+  font-weight: 800;
+
+  background: linear-gradient(93deg, $secondary, $primary, #640bb4);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.rainbow-small {
+  font-size: 15px;
+  font-weight: 800;
+
+  background: linear-gradient(93deg, $secondary, $primary, #640bb4);
+  -webkit-background-clip: text;
+  color: transparent;
+}

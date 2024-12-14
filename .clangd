@@ -1,0 +1,2 @@
+CompileFlags:
+    Add: [-Ideps/cereal/include]
