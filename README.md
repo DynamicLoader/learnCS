@@ -1,5 +1,12 @@
 # GCScholarInsight
 
+## Authors
+
+- [@Alexlin (Hongjie Lin)](https://github.com/AlexLin625)
+- [@DynamicLoader (Yi Lu)](https://github.com/DynamicLoader)
+- [@hohq (White Bill)](https://github.com/hohq)
+- [@perfsakuya (Hibiki)](https://github.com/perfsakuya)
+
 ## 构建说明（使用WSL2）
 
 ### 前端
