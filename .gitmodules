@@ -1,0 +1,4 @@
+[submodule "GCScholarInsight"]
+	path = GCScholarInsight
+	url = https://github.com/DynamicLoader/learnCS.git
+	branch = GCScholarInsight
