@@ -2,3 +2,23 @@
 	path = GCScholarInsight
 	url = https://github.com/DynamicLoader/learnCS.git
 	branch = GCScholarInsight
+[submodule "HRCore"]
+	path = HRCore
+	url = https://github.com/DynamicLoader/learnCS.git
+	branch = HRCore
+[submodule "SPLC"]
+	path = SPLC
+	url = https://github.com/DynamicLoader/learnCS.git
+	branch = SPLC
+[submodule "SuperNAM-Z"]
+	path = SuperNAM-Z
+	url = https://github.com/DynamicLoader/learnCS.git
+	branch = SuperNAM-Z
+[submodule "SimpleET"]
+	path = SimpleET
+	url = https://github.com/DynamicLoader/learnCS.git
+	branch = SimpleET
+[submodule "LittleUtils"]
+	path = LittleUtils
+	url = https://github.com/DynamicLoader/learnCS.git
+	branch = LittleUtils
