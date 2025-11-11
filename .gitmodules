@@ -22,3 +22,7 @@
 	path = LittleUtils
 	url = https://github.com/DynamicLoader/learnCS.git
 	branch = LittleUtils
+[submodule "LibPageSub"]
+	path = LibPageSub
+	url = https://github.com/DynamicLoader/learnCS.git
+	branch = LibPageSub
